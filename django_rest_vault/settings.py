@@ -119,6 +119,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # https://devcenter.heroku.
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 
 # Vault Config
 VAULT_TOKEN_LOOKUP_SELF = 'https://vault-heroku.herokuapp.com/v1/auth/token/lookup-self'
