@@ -145,7 +145,7 @@ Copy the `client_token` field and `request` again using that value replacing it 
 next command (delete both `<` and `>` symbols):
 
 ```shell
-curl --location --request GET 'http://127.0.0.1:8000/' \
+curl --request GET 'http://127.0.0.1:8000/' \
      --header 'X-Vault-Token: <client_token>'
 ```
 
