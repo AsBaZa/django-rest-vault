@@ -23,11 +23,11 @@ The architecture of this piece of code is pretty simple.
 
 ### Vault HashiCorp
 
-Vault is displayed in Heroku using the next repository:
+Vault is deployed in Heroku using the next repository:
 
 https://github.com/jace-ys/heroku-vault
 
-And is deployed in the next server:
+And is available in the next server:
 
 https://vault-heroku.herokuapp.com/
 
