@@ -99,6 +99,8 @@ User/Password:
 > to unseal. Please go to the next URL and check that Vault is unsealed before Login._
 > 
 > https://vault-heroku.herokuapp.com
+>
+> ![image](https://user-images.githubusercontent.com/40063730/107856513-ee424600-6e28-11eb-96f3-6c59aa510fda.png)
 
 ```shell
 curl --request POST 'https://vault-heroku.herokuapp.com/v1/auth/userpass/login/Test' \
