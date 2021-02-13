@@ -12,9 +12,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+# Get Heroku Status for production config
+HEROKU_STATUS = os.getenv('HEROKU_ESTADO')
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,7 +29,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False if HEROKU_STATUS else True
+
+# Force a HTTPS in Heroku
+if HEROKU_STATUS:
+    SECURE_SSL_REDIRECT = True
 
 ALLOWED_HOSTS = []
 
@@ -112,3 +121,6 @@ STATIC_URL = '/static/'
 
 # Vault Config
 VAULT_TOKEN_LOOKUP_SELF = 'https://vault-heroku.herokuapp.com/v1/auth/token/lookup-self'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())

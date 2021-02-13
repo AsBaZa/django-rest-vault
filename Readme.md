@@ -66,6 +66,10 @@ Before running the server, specify a `SECRET_KEY` for the Django server, for exa
 export SECRET_KEY="yb=T8zDMp=m-z>rC2rRcx*RP:pDHae~6jN=(Gqp"
 ```
 
+> Note: _Save the custom `SECRET_KEY` environment variable also in the Heroku server_
+> 
+> https://devcenter.heroku.com/articles/config-vars
+
 And run the server:
 
 ```shell
