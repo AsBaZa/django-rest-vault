@@ -69,6 +69,11 @@ export SECRET_KEY="yb=T8zDMp=m-z>rC2rRcx*RP:pDHae~6jN=(Gqp"
 > Note: _Save the custom `SECRET_KEY` environment variable also in the Heroku server_
 > 
 > https://devcenter.heroku.com/articles/config-vars
+> 
+> _Once the `SECRET_KEY` is configured in Heroku you can deploy the code to your app_
+ 
+> Extra Note: _You can define `HEROKU_STATUS` environment variable with value `PRODUCTION`
+> in Heroku in order to force HTTPS and to avoid debugging the errors_
 
 And run the server:
 
@@ -83,6 +88,12 @@ Now that the server is running make a `request` to it:
 ```shell
 curl http://127.0.0.1:8000/
 ```
+
+> Note: if you are testing in Heroku
+> 
+> ```shell
+> curl https://<your_app_name>.herokuapp.com
+> ```
 
 The expected response is:
 
@@ -152,6 +163,13 @@ next command (delete both `<` and `>` symbols):
 curl --request GET 'http://127.0.0.1:8000/' \
      --header 'X-Vault-Token: <client_token>'
 ```
+
+> Note: if you are testing in Heroku
+> 
+> ```shell
+> curl --request GET 'https://<your_app_name>.herokuapp.com' \
+>      --header 'X-Vault-Token: <client_token>'
+> ```
 
 If the `Token` is valid, the response should be:
 
