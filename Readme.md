@@ -1,5 +1,7 @@
 # django-rest-vault
 
+[![repo-size](https://img.shields.io/github/repo-size/AsBaZa/django-rest-vault?style=for-the-badge&logo=appveyor)](https://img.shields.io/github/repo-size/AsBaZa/django-rest-vault?style=for-the-badge&logo=appveyor) 
+
 This code sample uses [Django REST framework](https://www.django-rest-framework.org/)
 for building a Web API and [Vault HashiCorp](https://www.vaultproject.io/) for authentication.
 The objective of this code is to share a straightforward example on how to use an external
